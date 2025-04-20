@@ -1,9 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     overflow: hidden;
-    background: linear-gradient(45deg, #000000, #441167, #520f78, #a479b1, #e0c2ed);
+    background: linear-gradient(90deg, #FF9A8B 0%, #FF6B95 50%, #FF8E53 100%);
+    // background: linear-gradient(90deg, #667EEA 0%, #764BA2 50%, #9F4AFF 100%);
+    // background: linear-gradient(90deg, #4FACFE 0%, #00F2FE 50%, #0FF0B3 100%);
+    // background: linear-gradient(90deg, #2C3E50 0%, #4CA1AF 50%, #2C3E50 100%);
+    // background: linear-gradient(90deg, #FFAFBD 0%, #FFC3A0 50%, #FFD3B6 100%);
+    // background: linear-gradient(90deg, #FF3CAC, #784BA0, #2B86C5);
+
     background-size: 400% 400%;
-    animation: wave 100s ease infinite;
+    animation: wave 50s ease infinite;
+    // animation: gradient 8s ease infinite;
+
 }
 
 @keyframes wave {
