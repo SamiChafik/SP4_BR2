@@ -1,8 +1,11 @@
 .quiz-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .answers button {
-    text-align: left;
-    white-space: normal;
-  }
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.answers button {
+  text-align: left;
+  white-space: normal;
+}
