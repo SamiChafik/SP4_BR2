@@ -37,12 +37,10 @@ export class QuizComponent {
     this.selectedAnswer = null;
     this.isCorrect = null;
     
-    if (this.isLastQuestion) {
+    if (this.quizService.currentQuestionIndex >= this.quizService.questions.length - 1) {
       setTimeout(() => {
-        this.router.navigate(['/']);
-        this.quizService.currentQuestionIndex = 0;
-        this.quizService.score = 0;
-      }, 1000);
+        this.router.navigate(['/results']);
+      }, 1500);
     } else {
       this.quizService.currentQuestionIndex++;
     }
