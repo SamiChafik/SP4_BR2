@@ -25,4 +25,11 @@ export class QuizService {
   shuffleAnswers(answers: string[]) {
     return [...answers].sort(() => Math.random() - 0.5);
   }
+
+  resetQuiz() {
+    this.questions = [];
+    this.currentQuestionIndex = 0;
+    this.score = 0;
+  }
+  
 }
