@@ -1,1 +1,30 @@
-<p>history works!</p>
+<div class="history-container">
+    <h2>Quiz History</h2>
+    
+    <div *ngIf="history.length === 0" class="no-results">
+      No quiz results yet.
+    </div>
+
+    <table *ngIf="history.length > 0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Date</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let result of history">
+          <td>{{ result.name }}</td>
+          <td>{{ result.score }}/{{ result.total }}</td>
+          <td>{{ result.date }}</td>
+          <td>{{ result.category }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button (click)="goHome()">Back to Quiz</button>
+    <button (click)="clear()">Clear history</button>
+    
+  </div>
