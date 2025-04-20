@@ -1,1 +1,21 @@
-<p>results works!</p>
+<div class="results-container">
+    <h2>Quiz Completed!</h2>
+    <div class="score-display">
+      Your score: {{ quizService.score }}/{{ quizService.questions.length }}
+    </div>
+
+    <div class="name-input">
+      <label>Enter your name to save your score:</label>
+      <input [(ngModel)]="userName" placeholder="Your name">
+      <button (click)="saveScore()"><i class="fa-solid fa-floppy-disk"></i></button>
+    </div>
+
+    <div *ngIf="nameSubmitted" class="saved-message">
+      Score saved!
+    </div>
+
+    <div class="action-buttons">
+      <button (click)="playAgain()">Play Again</button>
+      <button (click)="viewHistory()">View History</button>
+    </div>
+</div>
